@@ -1,3 +1,7 @@
 FROM node:alpine3.14
 
-RUN npm install -f @angular/cli
+WORKDIR /code
+
+RUN npm install @angular/cli
+
+CMD npm run start -- --host 0.0.0.0
